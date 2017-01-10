@@ -44,12 +44,15 @@
             this.step1TitleLabel = new System.Windows.Forms.Label();
             this.step2TitleLabel = new System.Windows.Forms.Label();
             this.step2InfoLabel = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.step2OverviewLabel = new System.Windows.Forms.Label();
-            this.step2IPSWFileLabel = new System.Windows.Forms.Label();
+            this.overviewInfo = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.stepGUI.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // latestFirmware
@@ -76,7 +79,8 @@
             // 
             // runButton
             // 
-            this.runButton.Location = new System.Drawing.Point(176, 149);
+            this.runButton.Enabled = false;
+            this.runButton.Location = new System.Drawing.Point(178, 247);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(295, 51);
             this.runButton.TabIndex = 12;
@@ -120,6 +124,7 @@
             this.stepGUI.Controls.Add(this.tabPage1);
             this.stepGUI.Controls.Add(this.tabPage2);
             this.stepGUI.Controls.Add(this.tabPage3);
+            this.stepGUI.Controls.Add(this.tabPage4);
             this.stepGUI.Location = new System.Drawing.Point(12, 12);
             this.stepGUI.Name = "stepGUI";
             this.stepGUI.SelectedIndex = 0;
@@ -152,8 +157,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.step2IPSWFileLabel);
-            this.tabPage3.Controls.Add(this.step2OverviewLabel);
             this.tabPage3.Controls.Add(this.step2InfoLabel);
             this.tabPage3.Controls.Add(this.step2TitleLabel);
             this.tabPage3.Controls.Add(this.runButton);
@@ -161,7 +164,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(647, 315);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Step 2";
+            this.tabPage3.Text = "Final step";
             // 
             // step1InfoLabel
             // 
@@ -204,24 +207,49 @@
             this.step2InfoLabel.Text = resources.GetString("step2InfoLabel.Text");
             this.step2InfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.checkedListBox1);
+            this.tabPage4.Controls.Add(this.overviewInfo);
+            this.tabPage4.Controls.Add(this.step2OverviewLabel);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(647, 315);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Overview";
+            // 
             // step2OverviewLabel
             // 
             this.step2OverviewLabel.AutoSize = true;
-            this.step2OverviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.step2OverviewLabel.Location = new System.Drawing.Point(4, 240);
+            this.step2OverviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.step2OverviewLabel.Location = new System.Drawing.Point(283, 12);
             this.step2OverviewLabel.Name = "step2OverviewLabel";
-            this.step2OverviewLabel.Size = new System.Drawing.Size(74, 17);
-            this.step2OverviewLabel.TabIndex = 15;
+            this.step2OverviewLabel.Size = new System.Drawing.Size(80, 20);
+            this.step2OverviewLabel.TabIndex = 17;
             this.step2OverviewLabel.Text = "Overview";
             // 
-            // step2IPSWFileLabel
+            // overviewInfo
             // 
-            this.step2IPSWFileLabel.AutoSize = true;
-            this.step2IPSWFileLabel.Location = new System.Drawing.Point(4, 266);
-            this.step2IPSWFileLabel.Name = "step2IPSWFileLabel";
-            this.step2IPSWFileLabel.Size = new System.Drawing.Size(145, 13);
-            this.step2IPSWFileLabel.TabIndex = 16;
-            this.step2IPSWFileLabel.Text = "IPSW to use: None selected!";
+            this.overviewInfo.AutoSize = true;
+            this.overviewInfo.Location = new System.Drawing.Point(185, 43);
+            this.overviewInfo.Name = "overviewInfo";
+            this.overviewInfo.Size = new System.Drawing.Size(276, 65);
+            this.overviewInfo.TabIndex = 18;
+            this.overviewInfo.Text = resources.GetString("overviewInfo.Text");
+            this.overviewInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.HorizontalScrollbar = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "IPSW to use: None selected!"});
+            this.checkedListBox1.Location = new System.Drawing.Point(188, 154);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(273, 124);
+            this.checkedListBox1.TabIndex = 19;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // MainWindow
             // 
@@ -240,6 +268,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +291,9 @@
         private System.Windows.Forms.Label step1TitleLabel;
         private System.Windows.Forms.Label step2InfoLabel;
         private System.Windows.Forms.Label step2TitleLabel;
-        private System.Windows.Forms.Label step2IPSWFileLabel;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label overviewInfo;
         private System.Windows.Forms.Label step2OverviewLabel;
     }
 }

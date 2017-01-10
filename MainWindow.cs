@@ -32,7 +32,9 @@ namespace IPSW_Restorer
             if (openIPSW.ShowDialog() == DialogResult.OK)
             {
                 ipswFilePath = openIPSW.FileName;
-                step2IPSWFileLabel.Text = "IPSW to use: " + "'" + openIPSW.FileName + "'";
+
+                var items = checkedListBox1.Items;
+                items[0] = "IPSW to use: " + "'" + openIPSW.FileName + "'";
             }
         }
 
@@ -85,7 +87,8 @@ namespace IPSW_Restorer
 
         private void latestFirmware_CheckedChanged(object sender, EventArgs e)
         {
-            if(latestFirmware.Checked == true)
+
+            if (latestFirmware.Checked == true)
             {
                 // Checkbox is checked (true)
 
@@ -93,7 +96,9 @@ namespace IPSW_Restorer
                 selectIPSWButton.Text = "Will use latest available from Apple";
                 // We checked this box, disable the "Select IPSW" button
                 selectIPSWButton.Enabled = false;
-                step2IPSWFileLabel.Text = "IPSW file to use: Latest version from Apple";
+                var items = checkedListBox1.Items;
+
+                items[0] = "IPSW file to use: Latest version from Apple";
             }
 
             if(latestFirmware.Checked == false)
@@ -107,12 +112,32 @@ namespace IPSW_Restorer
 
                 if(ipswFilePath != null)
                 {
-                    step2IPSWFileLabel.Text = "IPSW file to use: " + "'" + ipswFilePath + "'";
+                    var items = checkedListBox1.Items;
+                    items[0] = "IPSW file to use: " + ipswFilePath;
                 }
                 if(ipswFilePath == null)
                 {
-                    step2IPSWFileLabel.Text = "IPSW file to use: None selected!";
+                    var items = checkedListBox1.Items;
+
+                    items[0] = "IPSW file to use: None selected!";
                 }
+            }
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checkedListBox1.CheckedItems.Count == checkedListBox1.Items.Count)
+            {
+                // If all checkboxes are checked and an IPSW option is selected, feel free to enable the restore button
+
+                if(ipswFilePath != null || latestFirmware.Checked == true)
+                {
+                    runButton.Enabled = true;
+                }
+            }
+            else
+            {
+                runButton.Enabled = false;
             }
         }
     }
