@@ -26,18 +26,16 @@ namespace IPSW_Restorer
             MessageBox.Show(information.ToString(), "IPSW Restore about", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void fileButton_Click(object sender, EventArgs e)
+        private void selectIPSWButton_Click(object sender, EventArgs e)
         {
-            openIPSW.Filter = "IPSW files|*.ipsw;*.zip";
-            if(openIPSW.ShowDialog() == DialogResult.OK)
+            openIPSW.Filter = "IPSW files|*.ipsw";
+            if (openIPSW.ShowDialog() == DialogResult.OK)
             {
                 ipswFilePath = openIPSW.FileName;
             }
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void runButton_Click(object sender, EventArgs e)
         {
             StringBuilder cmd = new StringBuilder();
             // cmd.Append("idevicrestore.exe ");
@@ -55,32 +53,32 @@ namespace IPSW_Restorer
 
             // Step 2
 
-            if(basebandOption.Checked)
+            if (basebandOption.Checked)
             {
                 cmd.Append("-x ");
             }
 
-            if(tssFromCydia.Checked)
+            if (tssFromCydia.Checked)
             {
                 cmd.Append("-s ");
             }
 
-            if(fetchTSS.Checked)
+            if (fetchTSS.Checked)
             {
                 cmd.Append("-t ");
             }
 
-            if(limer4in.Checked)
+            if (limer4in.Checked)
             {
                 cmd.Append("-p ");
             }
 
-            if(fullyRestore.Checked)
+            if (fullyRestore.Checked)
             {
                 cmd.Append("-e ");
             }
 
-            if(ipswFilePath != null)
+            if (ipswFilePath != null)
             {
                 cmd.Append(" \"" + ipswFilePath + "\" ");
             }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.stepOneLabel = new System.Windows.Forms.Label();
-            this.fileButton = new System.Windows.Forms.Button();
             this.labelStepTwo = new System.Windows.Forms.Label();
             this.basebandOption = new System.Windows.Forms.CheckBox();
             this.tssFromCydia = new System.Windows.Forms.CheckBox();
@@ -38,9 +37,10 @@
             this.limer4in = new System.Windows.Forms.CheckBox();
             this.fullyRestore = new System.Windows.Forms.CheckBox();
             this.stepThreeLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.openIPSW = new System.Windows.Forms.OpenFileDialog();
+            this.runButton = new System.Windows.Forms.Button();
+            this.selectIPSWButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // stepOneLabel
@@ -51,16 +51,6 @@
             this.stepOneLabel.Size = new System.Drawing.Size(107, 13);
             this.stepOneLabel.TabIndex = 0;
             this.stepOneLabel.Text = "1. Select the ipsw file";
-            // 
-            // fileButton
-            // 
-            this.fileButton.Location = new System.Drawing.Point(13, 30);
-            this.fileButton.Name = "fileButton";
-            this.fileButton.Size = new System.Drawing.Size(295, 51);
-            this.fileButton.TabIndex = 1;
-            this.fileButton.Text = "Open";
-            this.fileButton.UseVisualStyleBackColor = true;
-            this.fileButton.Click += new System.EventHandler(this.fileButton_Click);
             // 
             // labelStepTwo
             // 
@@ -140,16 +130,6 @@
             this.stepThreeLabel.TabIndex = 9;
             this.stepThreeLabel.Text = "3. Perform action";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(15, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(295, 51);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -161,13 +141,34 @@
             this.linkLabel1.Text = "Download source code";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // runButton
+            // 
+            this.runButton.Location = new System.Drawing.Point(15, 278);
+            this.runButton.Name = "runButton";
+            this.runButton.Size = new System.Drawing.Size(295, 51);
+            this.runButton.TabIndex = 12;
+            this.runButton.Text = "Run";
+            this.runButton.UseVisualStyleBackColor = true;
+            this.runButton.Click += new System.EventHandler(this.runButton_Click);
+            // 
+            // selectIPSWButton
+            // 
+            this.selectIPSWButton.Location = new System.Drawing.Point(16, 30);
+            this.selectIPSWButton.Name = "selectIPSWButton";
+            this.selectIPSWButton.Size = new System.Drawing.Size(295, 51);
+            this.selectIPSWButton.TabIndex = 13;
+            this.selectIPSWButton.Text = "Select IPSW";
+            this.selectIPSWButton.UseVisualStyleBackColor = true;
+            this.selectIPSWButton.Click += new System.EventHandler(this.selectIPSWButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 366);
+            this.Controls.Add(this.selectIPSWButton);
+            this.Controls.Add(this.runButton);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.stepThreeLabel);
             this.Controls.Add(this.fullyRestore);
             this.Controls.Add(this.limer4in);
@@ -176,7 +177,6 @@
             this.Controls.Add(this.tssFromCydia);
             this.Controls.Add(this.basebandOption);
             this.Controls.Add(this.labelStepTwo);
-            this.Controls.Add(this.fileButton);
             this.Controls.Add(this.stepOneLabel);
             this.Name = "MainWindow";
             this.Text = "idevicerestore gui";
@@ -189,7 +189,6 @@
         #endregion
 
         private System.Windows.Forms.Label stepOneLabel;
-        private System.Windows.Forms.Button fileButton;
         private System.Windows.Forms.Label labelStepTwo;
         private System.Windows.Forms.CheckBox basebandOption;
         private System.Windows.Forms.CheckBox tssFromCydia;
@@ -198,9 +197,10 @@
         private System.Windows.Forms.CheckBox limer4in;
         private System.Windows.Forms.CheckBox fullyRestore;
         private System.Windows.Forms.Label stepThreeLabel;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.OpenFileDialog openIPSW;
+        private System.Windows.Forms.Button runButton;
+        private System.Windows.Forms.Button selectIPSWButton;
     }
 }
 

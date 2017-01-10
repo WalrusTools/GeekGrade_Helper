@@ -1,0 +1,9 @@
+C:\Users\Dell\Source\Repos\idevicerestore-gui\bin\Debug\IPSW Restorer.exe.config
+C:\Users\Dell\Source\Repos\idevicerestore-gui\bin\Debug\IPSW Restorer.exe
+C:\Users\Dell\Source\Repos\idevicerestore-gui\bin\Debug\IPSW Restorer.pdb
+C:\Users\Dell\Source\Repos\idevicerestore-gui\obj\Debug\idevicerestore gui.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Source\Repos\idevicerestore-gui\obj\Debug\IPSW_Restorer.MainWindow.resources
+C:\Users\Dell\Source\Repos\idevicerestore-gui\obj\Debug\IPSW_Restorer.Properties.Resources.resources
+C:\Users\Dell\Source\Repos\idevicerestore-gui\obj\Debug\idevicerestore gui.csproj.GenerateResource.Cache
+C:\Users\Dell\Source\Repos\idevicerestore-gui\obj\Debug\IPSW Restorer.exe
+C:\Users\Dell\Source\Repos\idevicerestore-gui\obj\Debug\IPSW Restorer.pdb
