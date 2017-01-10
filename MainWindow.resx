@@ -120,14 +120,6 @@
   <metadata name="openIPSW.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="step2InfoLabel.Text" xml:space="preserve">
-    <value>You're now ready to restore your device.
-
-Please sit the device off to the side, and do not touch it.
-Although possible to restore your device via DFU mode
-in the case of a partial restore, it's not reccomended you
-go and try it out. Sit back, relax, and wait.</value>
-  </data>
   <data name="step1InfoLabel.Text" xml:space="preserve">
     <value>There's two options you can choose here.
 
@@ -137,6 +129,14 @@ you'd like to use (which is currently signed by Apple)
 2. Download latest iOS IPSW - You should use this if
 you would like to get the latest signed iOS version
 available for your device.</value>
+  </data>
+  <data name="step2InfoLabel.Text" xml:space="preserve">
+    <value>You're now ready to restore your device.
+
+Please sit the device off to the side, and do not touch it.
+Although possible to restore your device via DFU mode
+in the case of a partial restore, it's not reccomended you
+go and try it out. Sit back, relax, and wait.</value>
   </data>
   <data name="overviewInfo.Text" xml:space="preserve">
     <value>For safety purposes, please review the information below.

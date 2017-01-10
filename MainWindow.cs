@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 using System.Windows.Forms;
 
-namespace IPSW_Restorer
+namespace GeekGradeHelper
 {
     public partial class MainWindow : Form
     {

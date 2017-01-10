@@ -7,8 +7,8 @@
     <ProjectGuid>{07092A12-3923-41B5-A7B6-3E70F8BF9543}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IPSW_Restorer</RootNamespace>
-    <AssemblyName>IPSW Restorer</AssemblyName>
+    <RootNamespace>GeekGradeHelper</RootNamespace>
+    <AssemblyName>GeekGrade_Helper</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

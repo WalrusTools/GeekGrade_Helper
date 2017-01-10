@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace IPSW_Restorer
+namespace GeekGradeHelper
 {
     static class Program
     {
