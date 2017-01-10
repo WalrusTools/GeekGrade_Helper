@@ -32,6 +32,7 @@ namespace IPSW_Restorer
             if (openIPSW.ShowDialog() == DialogResult.OK)
             {
                 ipswFilePath = openIPSW.FileName;
+                step2IPSWFileLabel.Text = "IPSW to use: " + "'" + openIPSW.FileName + "'";
             }
         }
 
@@ -92,6 +93,7 @@ namespace IPSW_Restorer
                 selectIPSWButton.Text = "Will use latest available from Apple";
                 // We checked this box, disable the "Select IPSW" button
                 selectIPSWButton.Enabled = false;
+                step2IPSWFileLabel.Text = "IPSW file to use: Latest version from Apple";
             }
 
             if(latestFirmware.Checked == false)
@@ -102,6 +104,15 @@ namespace IPSW_Restorer
                 selectIPSWButton.Text = "Select IPSW";
                 // We unchecked this box, enable the "Select IPSW" button
                 selectIPSWButton.Enabled = true;
+
+                if(ipswFilePath != null)
+                {
+                    step2IPSWFileLabel.Text = "IPSW file to use: " + "'" + ipswFilePath + "'";
+                }
+                if(ipswFilePath == null)
+                {
+                    step2IPSWFileLabel.Text = "IPSW file to use: None selected!";
+                }
             }
         }
     }
