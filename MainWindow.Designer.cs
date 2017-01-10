@@ -80,7 +80,7 @@
             // runButton
             // 
             this.runButton.Enabled = false;
-            this.runButton.Location = new System.Drawing.Point(178, 247);
+            this.runButton.Location = new System.Drawing.Point(176, 188);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(295, 51);
             this.runButton.TabIndex = 12;
